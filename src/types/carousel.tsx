@@ -8,6 +8,7 @@ export interface CarouselSectors {
 }
 
 export interface CarouselItem {
+    id: string
     title: string
     year: string
     posterUrl: string

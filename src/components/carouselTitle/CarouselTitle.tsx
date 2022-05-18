@@ -6,7 +6,7 @@ interface IProps {
 
 const CarouselTitle = (props: IProps) => {
     return (
-        <div>{props.text}</div>
+        <h2>{props.text}</h2>
     )
 }
 

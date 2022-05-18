@@ -1,7 +1,7 @@
-export const GET_CAROUSEL_DATA = "getCarouselData";
+export const GET_CAROUSEL_DATA = 'getCarouselData'
 
-//todo add types
+// todo add types
 export interface ICarouselDataGet {
-    type: typeof GET_CAROUSEL_DATA,
-    payload: any
+  type: typeof GET_CAROUSEL_DATA
+  payload: any
 }

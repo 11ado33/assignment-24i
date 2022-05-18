@@ -1,8 +1,8 @@
-import {combineReducers} from 'redux'
+import { combineReducers } from 'redux'
 import carouselReducer from './carousel/reducer'
 
 const rootReducer = combineReducers({
-    carousel: carouselReducer
+  carousel: carouselReducer
 })
 
 export default rootReducer

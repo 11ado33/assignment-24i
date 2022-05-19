@@ -50,6 +50,8 @@ The list of compatible OS or Browsers with version, date of test and resolution.
 | Safari        | 15.5         | 19.5.2022 | 1792 x 995 (landscape)                    |
 | Google Chrome | 101.0.4951.64             | 19.5.2022 | 360 x 640 (portrait - Nexus 5 dimensions) |
 
+Screenshots of desktop Safari and mobile Google Chrome are in [assets](./assets) folder.
+
 ## Author
 
 Andrej Bliznak

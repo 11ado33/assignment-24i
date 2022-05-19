@@ -1,8 +1,20 @@
-# Getting Started with Create React App
+# 24i Assignment
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## About
+
+The application is a Web application that shows a simple example of carousel web page and the movie detail web page.
+
+This site is not a UI master peace but a simple structure application that just is a micro viable product.
+
+The "API" consist of one static file that is called by simple `axios` calls in a prepared structure of `redux` store,
+that is not particularly used in this app right now.
+
 ## Available Scripts
+
+The scripts are run by `craco` script to make the import aliases working in a simple way (there are many options to
+achieve that though).
 
 In the project directory, you can run:
 
@@ -14,11 +26,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -29,18 +36,20 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To tun the app either in development mode or in produciton mode `npm install` should precede.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Compatibility
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The list of compatible OS or Browsers with version, date of test and resolution.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+| OS/Browser    | Version      | Date      | Resolution                                |
+|---------------|--------------|-----------|-------------------------------------------|
+| Google Chrome | 101.0.4951.64 | 18.5.2022 | 1180x820 (landscape)                      |
+| Safari        | 15.5         | 19.5.2022 | 1792 x 995 (landscape)                    |
+| Google Chrome | 101.0.4951.64             | 19.5.2022 | 360 x 640 (portrait - Nexus 5 dimensions) |
 
-## Learn More
+## Author
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Andrej Bliznak

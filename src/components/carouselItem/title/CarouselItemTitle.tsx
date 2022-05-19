@@ -1,4 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const CardTitle = styled.p`
+  margin-left: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`
 
 interface IProps {
   title: string
@@ -6,7 +13,7 @@ interface IProps {
 
 const CarouselItemTitle = (props: IProps) => {
   const { title } = props
-  return <p style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>{title}</p>
+  return <CardTitle>{title}</CardTitle>
 }
 
 export default CarouselItemTitle

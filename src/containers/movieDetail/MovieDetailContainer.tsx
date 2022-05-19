@@ -1,25 +1,33 @@
 import React from 'react'
-import { CarouselItem } from '../../types/carousel'
+import { Movie } from '@/types/carousel'
+import styled from 'styled-components'
+import MovieDetailHead from './head/MovieDetailHead'
+import MovieDetailContent from './content/MovieDetailContent'
+
+// Page wrapper styled component
+const PageWrapper = styled.div`
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex !important;
+  flex-direction: column;
+`
 
 interface IProps {
-  movie: CarouselItem
+  movie: Movie
 }
 
+/*
+ * Container for movie detail
+ */
 const MovieDetailContainer = (props: IProps) => {
   const { movie } = props
   return (
-    <div style={{ height: '100%', width: '100%', position: 'absolute' }}>
-      <div style={{ width: '100%', height: '50%', position: 'absolute' }}>
-        <img
-          style={{ objectFit: 'cover' }}
-          src={movie.posterUrl}
-          width="100%"
-          height="100%"
-        />
-        <div style={{ position: 'absolute', bottom: 0 }}>{movie.title}</div>
-      </div>
-    </div>
+    <PageWrapper>
+      <MovieDetailHead movie={movie} />
+      <MovieDetailContent movie={movie} />
+    </PageWrapper>
   )
 }
-
+// [END]
 export default MovieDetailContainer

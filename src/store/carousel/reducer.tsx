@@ -1,16 +1,20 @@
-import { GET_CAROUSEL_DATA, ICarouselDataGet } from './actionTypes'
+import { ICarouselDataGet } from './actionTypes'
+import { ICarouselState } from './type.d'
 
 const initialState = {
   items: []
 }
 
-const reducer = (state = initialState, action: ICarouselDataGet): any => {
+/**
+ * Reducer that should be responsible for storing data of movie carousel
+ * @param state current state
+ * @param action action that should be performed
+ */
+const reducer = (
+  state = initialState,
+  action: ICarouselDataGet
+): ICarouselState => {
   switch (action.type) {
-    case GET_CAROUSEL_DATA:
-      return {
-        ...state,
-        items: action.payload
-      }
     default:
       return state
   }

@@ -1,11 +1,21 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { CarouselItem } from '../../types/carousel'
+import { Movie } from '../../types/carousel'
 import CarouselItemTitle from './title/CarouselItemTitle'
 import CarouselItemImage from './image/CarouselItemImage'
+import styled from 'styled-components'
+
+const WrapperCard = styled.div`
+  margin: 4px;
+  display: inline-block;
+  height: 256px;
+  width: 128px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+`
 
 interface IProps {
-  item: CarouselItem
+  item: Movie
 }
 
 function CarouselItemComponent(props: IProps) {
@@ -13,23 +23,14 @@ function CarouselItemComponent(props: IProps) {
   const { item } = props
 
   const onItemClick = () => {
-    console.log(item.id)
     navigate(`/detail/${item.id}`)
   }
 
   return (
-    <div
-      onClick={onItemClick}
-      style={{
-        display: 'inline-block',
-        height: '256px',
-        width: '128px',
-        scrollbarWidth: 'none'
-      }}
-    >
+    <WrapperCard onClick={onItemClick}>
       <CarouselItemImage imageUrl={item.posterUrl} />
       <CarouselItemTitle title={item.title} />
-    </div>
+    </WrapperCard>
   )
 }
 

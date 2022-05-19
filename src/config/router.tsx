@@ -1,8 +1,11 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import HomePage from '../page/home/HomePage'
-import { DetailPage } from '../page/defail/DetailPage'
+import HomePage from '@/page/home/HomePage'
+import DetailPage from '@/page/defail/DetailPage'
 
+/*
+ * Component responsible for router config and page routing
+ */
 const Router = () => {
   return (
     <Routes>

@@ -1,32 +1,32 @@
 import axios from 'axios'
-import { CarouselItem } from '../types/carousel'
+import { CarouselData, Movie } from '@/types/carousel'
 
 const DATA_API_PATH = '/data.json'
 
-// todo add type
-export const getAllData = (): Promise<any> => {
-  console.log('heeeeere')
+/*
+ * Service responsible for downloading the carousel data from API
+ */
+export const getCarouselDataFromApi = (): Promise<CarouselData> => {
   return new Promise((resolve, reject) => {
     axios
       .get(DATA_API_PATH)
-      .then((res: any) => {
-        console.log('heere')
-        console.log(res.data)
+      .then((res) => {
         resolve(res.data)
       })
       .catch((err) => reject(err))
   })
 }
 
-// this would probably get data from data detail endpoint
-export const getCarouselItem = (id: string): Promise<CarouselItem | null> =>
+/*
+ * Service for getting movie idem by ID this would probably get data from data detail endpoint
+ */
+export const getMovieByID = (id: string): Promise<Movie | null> =>
   new Promise((resolve, reject) => {
     axios
       .get(DATA_API_PATH)
-      .then((res: any) => {
+      .then((res) => {
         for (const section of res.data.carousels) {
           for (const item of section.items) {
-            console.log(item.id)
             if (item.id == id) {
               resolve(item)
             }

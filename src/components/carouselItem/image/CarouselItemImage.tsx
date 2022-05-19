@@ -1,4 +1,10 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Image = styled.img`
+  width: 100%;
+  height: 200px;
+`
 
 interface IProps {
   imageUrl: string
@@ -7,7 +13,7 @@ interface IProps {
 function CarouselItemImage(props: IProps) {
   const { imageUrl } = props
 
-  return <img width="100px" height="200px" src={imageUrl} alt={imageUrl} />
+  return <Image src={imageUrl} alt={imageUrl} />
 }
 
 export default CarouselItemImage

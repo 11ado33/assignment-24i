@@ -1,25 +1,35 @@
 import { ThunkAction } from 'redux-thunk'
 import { Action } from 'redux'
-import { getAllData } from '../../service/dataService'
-import { GET_CAROUSEL_DATA } from './actionTypes'
+import { getCarouselDataFromApi } from '@/service/dataService'
+import { GET_CAROUSEL_DATA, ICarouselDataGet } from './actionTypes'
+import { ICarouselState } from './type.d'
+import { CarouselData } from '@/types/carousel'
 
-const addCarouselDataAction = (data: any) => {
-  console.log(data)
+/**
+ * Function that gets carousel data
+ * @param data data that should be stored
+ */
+const addCarouselDataAction = (data: CarouselData): ICarouselDataGet => {
   return {
-    type: GET_CAROUSEL_DATA
-    // data: data,
+    type: GET_CAROUSEL_DATA,
+    payload: data
   }
 }
 
-//todo add types
-export const getCarouselData = (): ThunkAction<
+/*
+ * Redux {@link ThunkAction} that gets carousel data
+ */
+const getCarouselData = (): ThunkAction<
   void,
-  any,
+  ICarouselState,
   unknown,
   Action<string>
 > => {
-  console.log('here')
   return (dispatch) => {
-    return getAllData().then((data) => dispatch(addCarouselDataAction(data)))
+    return getCarouselDataFromApi().then((data) =>
+      dispatch(addCarouselDataAction(data))
+    )
   }
 }
+
+export { getCarouselData }
